@@ -105,3 +105,57 @@ Desktop
 Mobile
 - Virtual joystick (third-party asset)
 - Same movement logic as desktop input
+
+# Design Decisions & Rationale
+
+## Why Arcade Physics?
+
+The goal was to make driving:
+- Immediately understandable
+- Fun within seconds
+- Forgiving on extreme shapes and slopes
+
+Realistic physics break down quickly when:
+- Objects are tall
+- Center of mass is unusual
+- Shapes are non-vehicle-like
+
+Arcade physics allows intentional control over feel and consistency.
+
+Why Cancel Downhill Gravity on Slopes?
+
+- Instead of adding artificial uphill force, the controller:
+- Cancels gravity’s downhill component when grounded
+- Preserves gravity into the ground for stability
+- Keeps handling consistent across scales and inclines
+
+This prevents:
+- Vehicles sliding backward on slopes
+- Larger objects becoming underpowered
+- Constant per-object tuning
+- Why One Universal Script?
+
+The assignment specifically targets:
+
+- UGC workflows
+- AI-generated objects
+- No manual configuration
+
+Using a single adaptive controller:
+
+- Matches UGC platform constraints
+- Avoids per-prefab tuning
+- Scales to runtime-generated content
+
+# How to Run
+
+- Open the project in Unity 6.3
+- Load the Gameplay scene
+- Press Play
+- Use UI buttons to switch vehicles
+- Drive up and down the colored slides to test behavior
+
+Notes
+- All vehicles use the same controller script
+- No per-object physics tuning was applied
+- The system is designed to work with runtime-generated meshes
