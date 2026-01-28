@@ -84,12 +84,7 @@ These are used to validate:
 ### Drivable Objects
 
 Under Drivable Objects in the hierarchy, multiple objects of different shapes and proportions are used:
-
-- Table
-- Bench
-- Dog house
-- Bottle crate
-- Lamppost
+- Table , Bench , Dog house , Bottle crate ,Lamppost
 
 All of them:
 
